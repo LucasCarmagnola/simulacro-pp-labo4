@@ -1,0 +1,64 @@
+/* :host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+} */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 90%;
+    width: 450px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    gap: 15px;
+    box-sizing: border-box;
+    padding-top: 60px;
+}
+
+.pelicula {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #e1d3d3;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    transition: transform 0.2s;
+    cursor: pointer;
+    width: 90%;
+}
+
+.pelicula:hover {
+    transform: scale(1.02);  /* Efecto de hover */
+}
+
+.pelicula img {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.pelicula-info {
+    flex: 1;  /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pelicula-nombre {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pelicula-detalle {
+    font-size: 14px;
+    color: #666;
+}

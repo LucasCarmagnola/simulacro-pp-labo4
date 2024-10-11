@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="navegacion">
+        <button routerLink='/Peliculas'>Peliculas</button>
+        <button routerLink="/Actores">Alta actores</button>
+        <button routerLink="/AltaPelicula">Alta pelicula</button>
+    </div>
+    <h1>Formulario de alta de PELICULAS</h1>
+    <div class="form">
+        <form (ngSubmit)="cargarPelicula()" [formGroup]="formGroup">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" class="input" formControlName="nombre" required>
+
+            <label for="tipo">Tipo:</label>
+            <select name="tipo" id="tipo" class="input" style="width: 160px; height: 30px; border-radius: 5px; border-top: 2px solid black; border-left: 2px solid black;" formControlName="tipo">
+                <option value="{{ETipo.Accion}}">Accion</option>
+                <option value="{{ETipo.Terror}}">Terror</option>
+                <option value="{{ETipo.Comedia}}">Comedia</option>
+                <option value="{{ETipo.Amor}}">Amor</option>
+                <option value="{{ETipo.Otros}}">Otros</option>
+            </select>
+            
+            <label for="fechaEstreno">Fecha de estreno:</label>
+            <input type="date" class="input" id="fechaEstreno" formControlName="fechaEstreno" required>
+            
+            <label for="cantidadPublico">Cantidad de publico:</label>
+            <input type="text" id="cantidadPublico" class="input" formControlName="cantidadPublico">
+            
+            <label for="protagonista">Protagonista:</label>
+            <input type="text" class="input" id="protagonista" formControlName="protagonista" required>
+
+            <button type="submit" class="btn-actor">Enviar</button>
+        </form>
+    </div>
+    <app-tabla-actores class="tabla-actores" (actorSeleccionado)="recibirProtagonista($event)"></app-tabla-actores>
+
+</div>

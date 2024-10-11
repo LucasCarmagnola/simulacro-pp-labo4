@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 350px;
+    background-color: #936c6c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    padding: 20px;
+
+}
+
+.paises{
+    margin-top: 50px;
+    width: 70px;
+}

@@ -1,0 +1,86 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    position: absolute;
+    top: 30px;
+}
+.navegacion{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(181, 182, 161);
+}
+
+.tabla-paises{
+    height: 60%;
+    width: 350px;
+    max-width: 45%;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+.form{
+    box-sizing: border-box;
+    margin: 0;
+    height: 60%;
+    width: 350px;
+    background-color: #936c6c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+label{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-left: 70px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+input{
+    border-radius: 5px;
+    height: 25px;
+}
+
+.btn-actor{
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px white solid;
+    background: rgb(53, 111, 182);
+    color: white;
+    width: 100px;
+    height: 40px;
+    margin: 0;
+    margin-top: 25px;
+}
+.btn-actor:hover{
+    background: #3a38a1;
+}

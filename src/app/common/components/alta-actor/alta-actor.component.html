@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="navegacion">
+        <button routerLink='/Peliculas'>Peliculas</button>
+        <button routerLink="/Actores">Alta actores</button>
+        <button routerLink="/AltaPelicula">Alta pelicula</button>
+    </div>
+    <h1>Formulario de alta de actores y actrices</h1>
+    <div class="form">
+        <form action="" (ngSubmit)="cargarActor()" [formGroup]="formGroup">
+            <div>aca iria el form de alta de actores</div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" class="input" formControlName="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" class="input" id="apellido" formControlName="apellido" required>
+    
+            <label for="documento">Documento:</label>
+            <input type="text" class="input" id="documento" formControlName="documento" required>
+    
+            <label for="edad">Edad:</label>
+            <input type="number" class="input" id="edad" formControlName="edad" required>
+
+            <label for="pais">Pais:</label>
+            <input type="text" id="pais" class="input" formControlName="pais">
+    
+            <button type="submit" class="btn-actor">Enviar</button>
+        </form>
+    </div>
+    <app-tabla-paises class="tabla-paises" (paisSeleccionado)="recibirPais($event)"></app-tabla-paises>
+</div>

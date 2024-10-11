@@ -1,0 +1,9 @@
+<div class="container">
+    aca el componente tabla paises
+    <select name="pais" id="pais-select" class="paises" style="width: 170px; height: 30px; border-radius: 5px;">
+        @for(pais of paisesNombre; track $index){
+            <option value="{{pais}}">{{pais}}</option>
+        }
+    </select>
+    <!-- <button (click)="seleccionarPais()">Enviar pais</button> -->
+</div>

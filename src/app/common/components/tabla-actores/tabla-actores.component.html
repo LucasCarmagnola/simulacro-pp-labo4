@@ -1,0 +1,8 @@
+<div class="container">
+    ACTORES DADOS DE ALTA
+    <select name="actores" id="actor-select" class="actores" style="width: 170px; height: 30px; border-radius: 5px;">
+        @for(actor of actores; track $index){
+            <option value="{{actor.nombre}}">{{actor.nombre}}</option>
+        }
+    </select>
+</div>

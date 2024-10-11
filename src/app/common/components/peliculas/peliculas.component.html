@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="navegacion">
+        <button routerLink='/Peliculas'>Peliculas</button>
+        <button routerLink="/Actores">Alta actores</button>
+        <button routerLink="/AltaPelicula">Alta pelicula</button>
+    </div>
+    <app-tabla-peliculas class="tabla-pelis" [peliculasInput]="peliculas" (seleccionarPelicula)="peliculaSeleccionada = $event"></app-tabla-peliculas>
+    <app-detalle-peliculas class="detalle-pelis" [pelicula]="peliculaSeleccionada"></app-detalle-peliculas>
+</div>
