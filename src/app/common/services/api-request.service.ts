@@ -21,4 +21,9 @@ export class ApiRequestService {
     return peticion
   }
 
+  getInfoPais(pais : string){
+    const peticion = this.http.get(this.api + `name/${pais}`)
+    return peticion
+  }
+
 }

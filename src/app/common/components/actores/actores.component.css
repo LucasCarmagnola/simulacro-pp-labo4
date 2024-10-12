@@ -1,0 +1,41 @@
+:host {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.component-main{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container-componets{
+    height: 99%;
+    width: 90%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.3fr 2fr;
+}
+
+.componente{
+    background-color: rgb(192, 142, 142);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.horizontal{
+    grid-column: 1 / 4;
+}

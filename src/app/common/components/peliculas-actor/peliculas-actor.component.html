@@ -1,0 +1,12 @@
+<div class="container">
+
+    @if(actorInput){
+        <h3>Peliculas protagonizadas por: <br> {{actorInput.nombre + ' '}} {{actorInput.apellido}}</h3>
+        <ul>
+            @for(pelicula of peliculas; track $index){
+                <li>{{pelicula.nombre}}</li>
+            }
+
+        </ul>
+    }
+</div>

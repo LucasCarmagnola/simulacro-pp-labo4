@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { TablaActoresComponent } from "../tabla-actores/tabla-actores.component";
 import { Actor } from '../../classes/actor';
 import { ETipo, Pelicula } from '../../classes/pelicula';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-alta-pelicula',
@@ -44,6 +45,10 @@ export class AltaPeliculaComponent {
     ) 
     console.log(pelicula.tipo)
     this.databaseService.altaDocumento('peliculas', pelicula)
+    Swal.fire({
+      icon: "success",
+      title: "Pelicula dada de alta",
+    });
 
   }
 

@@ -31,4 +31,12 @@ export class DatabaseService {
     const colec = this.firestore.collection(coleccion)
     return colec.valueChanges()
   }
+
+  getPelisByActor(actor : string){
+    const coleccion = this.firestore.collection('peliculas', ref => 
+      ref.where('protagonista', '==', actor)
+    )
+    return coleccion.valueChanges()
+  }
+
 }

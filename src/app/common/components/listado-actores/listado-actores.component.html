@@ -1,0 +1,12 @@
+<div class="component">
+    <div class="container">
+        @for(actor of actores; track $index){
+            <div class="box-actor" (click)="enviarActor(actor)">
+                <h3>{{actor.nombre}}{{' ' + actor.apellido}}</h3>
+                <div>{{actor.edad +' años'}}</div>
+                <div class="pais">{{actor.pais}}</div>
+            </div>
+        }
+        
+    </div>
+</div>

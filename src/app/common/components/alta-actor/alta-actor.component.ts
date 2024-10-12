@@ -5,6 +5,7 @@ import { Pais } from '../../classes/pais';
 import { RouterLink } from '@angular/router';
 import { DatabaseService } from '../../services/database.service';
 import { Actor } from '../../classes/actor';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-alta-actor',
@@ -39,6 +40,10 @@ export class AltaActorComponent {
         this.formGroup.controls['documento'].value, this.formGroup.controls['edad'].value ,this.formGroup.controls['pais'].value)
 
       this.databaseService.altaDocumento('actores' , actor)
+      Swal.fire({
+        icon: "success",
+        title: "Actor dado de alta",
+      });
     } else {
       // Opcional: Marca todos los campos como tocados para que muestren los errores
       this.formGroup.markAllAsTouched();

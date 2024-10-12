@@ -1,0 +1,14 @@
+<div class="component-main">
+    <div class="navegacion">
+        <button routerLink='/Peliculas'>Peliculas</button>
+        <button routerLink="/AltaActor">Alta actores</button>
+        <button routerLink="/AltaPelicula">Alta pelicula</button>
+        <button routerLink="/Actores">Actores</button>
+    </div>
+    <div class="container-componets">
+        <app-listado-actores class="componente horizontal" (enviarDato)="recibirActor($event)"></app-listado-actores>
+        <app-detalle-actor class="componente" (enviarPais)="recibirPais($event)" [actorRecibido]="actorRecibidoParaOtroComponente"></app-detalle-actor>
+        <app-detalle-pais class="componente" [paisRecibido]="paisRecibidoParaOtroComponente" ></app-detalle-pais>
+        <app-peliculas-actor class="componente" [actorInput]="actorRecibidoParaOtroComponente"></app-peliculas-actor>
+    </div>
+</div>

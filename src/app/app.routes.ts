@@ -11,11 +11,11 @@ export const routes: Routes = [
         .then((c) => c.AltaPeliculaComponent)
     },
     {
-        path: 'Actores', loadComponent: () => import('./common/components//alta-actor/alta-actor.component')
+        path: 'AltaActor', loadComponent: () => import('./common/components//alta-actor/alta-actor.component')
         .then((c) => c.AltaActorComponent)
     },
-    // {
-    //     path: 'AltaActor', loadComponent: () => import('./common/components/peliculas/peliculas.component')
-    //     .then((c) => c.PeliculasComponent)
-    // },
+    {
+        path: 'Actores', loadComponent: () => import('./common/components/actores/actores.component')
+        .then((c) => c.ActoresComponent)
+    },
 ];
